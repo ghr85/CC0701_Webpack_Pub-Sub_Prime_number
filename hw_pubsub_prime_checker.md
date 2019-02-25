@@ -2,7 +2,7 @@
 
 ### Learning Objectives
 
-- Be able to install and configure webpack in an application
+- Be able to install and configure webpack in an application :white_check_mark:
 - Be able to implement the pub/sub pattern in a front-end JavaScript application
 
 ## Brief
@@ -27,15 +27,22 @@ Use webpack to bundle your JavaScript files.
 
 You will need to set-up webpack in your application:
 
-1. Install 'webpack' and 'webpack-cli' - `npm install webpack webpack-cli`
-2. Create a webpack config file - webpack.config.js
-3. Add the configuration details to the config file
-4. Add a script to the package.json to run webpack in watch mode - `"build": "webpack -w"`
-5. Add a script tag to link to the bundled file in the HTML - `<script type="text/javascript" src="js/bundle.js"></script>`
-6. Run webpack - `npm run build`
-7. Check the log that shows the JavaScript has loaded is showing in the browser console.
-8. Add `bundle.js` to a .gitignore file
+1. Install 'webpack' and 'webpack-cli' - `npm install webpack webpack-cli` :white_check_mark:
+2. Create a webpack config file - webpack.config.js :white_check_mark:
+3. Add the configuration details to the config file :white_check_mark:
+4. Add a script to the package.json to run webpack in watch mode - `"build": "webpack -w"` :white_check_mark:
+5. Add a script tag to link to the bundled file in the HTML - `<script type="text/javascript" src="js/bundle.js"></script>` :white_check_mark:
+6. Run webpack - `npm run build` :white_check_mark:
+7. Check the log that shows the JavaScript has loaded is showing in the browser console. :white_check_mark:
+8. Add `bundle.js` to a .gitignore file :white_check_mark:
 
 #### Pub/Sub
 
-When developing an application that implements the pub/sub pattern, one approach is to follow the event and data flow. You might start by identifying which event starts the data flow, and handling that first. Then pass the data through the application, making sure you have it available to you at each stage, before progressing. Drawing a pub/sub event and data flow diagram that you can refer back to can help with this.
+When developing an application that implements the pub/sub pattern, one approach is
+to follow the event and data flow.
+
+You might start by identifying which event starts the data flow, and handling that first.
+
+Then pass the data through the application, making sure you have it available to you at each stage, before progressing.
+
+Drawing a pub/sub event and data flow diagram that you can refer back to can help with this.
