@@ -20,7 +20,7 @@ const FormView = function(){
       //Now, call on the Pubsub object and use its publish method to send number input out on channel
       PubSub.publish('FormView:number-submitted:', numberInput)
     });
+  };
 };
-};
-
+//export the form view for use in the main app
 module.exports = FormView;

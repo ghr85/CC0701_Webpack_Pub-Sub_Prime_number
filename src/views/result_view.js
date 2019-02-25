@@ -13,7 +13,6 @@ ResultView.prototype.bindEvents = function () {
   PubSub.subscribe('FormView:number-submitted:', (event) =>{
     //assign a variable to custom event detail property - mesage data
     const numberInput = event.detail;
-    console.log('number sent out by form:' + numberInput);
   });
 
   PubSub.subscribe('PrimeNumber:result', (event) =>{
