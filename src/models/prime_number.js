@@ -3,6 +3,10 @@ const PrimeNumber = function(){
 
 };
 
+PrimeNumber.prototype.receive = function () {
+  Pubsub.subscribe()
+
+};
 PrimeNumber.prototype.numberIsPrime = function (number) {
   if (number <= 1) {
     return false;

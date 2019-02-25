@@ -15,7 +15,10 @@ const FormView = function(){
       console.log('form submitted - huzzah')
       //assign a variable to the value of the number field on submit
       const numberInput = event.target.number.value;
+      //log it out to show you've got it
       console.log(numberInput);
+      //Now, call on the Pubsub object and use its publish method to send number input out on channel
+      PubSub.publish('FormView:number-submitted:', numberInput)
     })
 }
 };

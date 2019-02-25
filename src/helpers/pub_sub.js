@@ -1,3 +1,5 @@
+
+//create a constructor for the PubSub helper model
 const PubSub = {
 
   publish: function(channel, payload){
