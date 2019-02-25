@@ -3,11 +3,9 @@ const PrimeNumber = function(){
 
 };
 
-PrimeNumber.prototype.receive = function () {
-  Pubsub.subscribe()
 
-};
 PrimeNumber.prototype.numberIsPrime = function (number) {
+
   if (number <= 1) {
     return false;
   }
@@ -20,9 +18,23 @@ PrimeNumber.prototype.numberIsPrime = function (number) {
 };
 
 PrimeNumber.prototype.primeResult = function (number) {
+
 if (this.numberIsPrime(number) === true){
+
   return `${number} is a prime number`
 } else{
-  `${number} is not a prime number`
+
+  return `${number} is not a prime number`
 }
 };
+
+PrimeNumber.prototype.bindEvents = function () {
+  PubSub.subscribe('FormView:number-submitted:', (event) => {
+    const numberInput = event.detail;
+    const result = this.primeResult(numberInput);
+console.log(result)
+    PubSub.publish('PrimeNumber:result', result);
+  });
+};
+
+module.exports = PrimeNumber;

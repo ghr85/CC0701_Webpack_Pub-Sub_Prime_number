@@ -14,8 +14,16 @@ ResultView.prototype.bindEvents = function () {
     //assign a variable to custom event detail property - mesage data
     const numberInput = event.detail;
     console.log('number sent out by form:' + numberInput);
-  })
+  });
 
+  PubSub.subscribe('PrimeNumber:result', (event) =>{
+    //assign a variable to the result HTML tag
+    const textReceiver = document.querySelector('#result');
+    //assign subscriber data to result html tag
+    textReceiver.textContent = event.detail;
 
+  });
 };
+
+//export the Result view so that it may be used in the main app file and thus webpack
 module.exports = ResultView
